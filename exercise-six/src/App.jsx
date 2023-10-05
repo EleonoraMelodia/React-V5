@@ -6,13 +6,11 @@ function App() {
   return (
     <div>
       <Hello />
-      <Hello />
-      <Hello />
       <Message/>
     </div>
   )
 }
 export default App
 
-/* the component will be rendered as many times as I reused it in App.jsx */
+/* Yes, I could render the Message component directly in the App.jsx, if I do it, the same component can be used in multiple parts of the application */
 
