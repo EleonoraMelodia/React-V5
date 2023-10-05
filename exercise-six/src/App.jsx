@@ -9,3 +9,5 @@ function App() {
   )
 }
 export default App
+
+/*I opened the application in my browser, and the Hello component is rendered*/ 

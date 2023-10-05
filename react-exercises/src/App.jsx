@@ -1,6 +1,3 @@
-
-
-
 function returnSum(a, b) {
   return a + b
 }
@@ -16,4 +13,3 @@ function App() {
 export default App;
 
 
-/* it happens that the Jsx expression is correctly rendered anyway */ 
