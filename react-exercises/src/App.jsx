@@ -1,4 +1,4 @@
-/*Write a function that receives a name argument and returns a h1 tag with the name variable appended to the "Hello, " string.*/ 
+
 
 
 function returnAName(name) {
@@ -16,3 +16,4 @@ function App() {
 export default App;
 
 
+/* it happens that on the screen the variable name is not rendered, only the title containing the string "Hello" is rendered*/ 
