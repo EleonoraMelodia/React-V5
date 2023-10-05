@@ -1,15 +1,18 @@
-function App() {
-  
-const hello = "Hello, World"
+/*Write a function that receives a name argument and returns a h1 tag with the name variable appended to the "Hello, " string.*/ 
 
-  return (
-    <>
-      <h1> {hello} </h1>
-    
-  </>
-   
-  )
+
+function returnAName(name) {
+  return name
 }
 
-export default App
+function App() {
+  return (
+    <div>
+      <h1> Hello {returnAName("Jimmy")}</h1>
+    </div>
+  );
+}
+
+export default App;
+
 
