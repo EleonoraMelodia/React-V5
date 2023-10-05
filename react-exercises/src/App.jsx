@@ -16,4 +16,4 @@ function App() {
 export default App;
 
 
-/* it happens that on the screen the variable name is not rendered, only the title containing the string "Hello" is rendered*/ 
+/* it happens that the Jsx expression is correctly rendered anyway */ 
