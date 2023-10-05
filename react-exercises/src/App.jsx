@@ -1,14 +1,14 @@
 
 
 
-function returnAName(name) {
-  return name
+function returnSum(a, b) {
+  return a + b
 }
 
 function App() {
   return (
     <div>
-      <h1> Hello {returnAName("Jimmy")}</h1>
+      <h2> {returnSum(4,7)}</h2>
     </div>
   );
 }
