@@ -5,6 +5,7 @@ import { AlertClock } from "./AlertClock";
 import { Counter } from "./Counter";
 import { useState } from "react";
 import { Clock } from "./Clock";
+import { MouseClicker } from "./MouseClicker";
 
 function App() {
   function handleButtonClick() {
@@ -29,7 +30,8 @@ function App() {
       <Welcome name={<strong>John</strong>} age={44} />
       <AlertClock buttonClicked={handleButtonClick} />
       <Counter counter={counter} incrementCounter={incrementCounter} decrementCounter={decrementCounter}  reset = {reset} />
-      <Clock/>
+      <Clock />
+      <MouseClicker name = "one" />
     </div>
   );
 }
