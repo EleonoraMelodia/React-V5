@@ -1,5 +1,5 @@
 export function AlertClock() {
-    return <button onClick={handleButtonClick}> Current Time </button>
+    return <button onClick={buttonClicked}> Current Time </button>
 }
 
 function handleButtonClick() {
