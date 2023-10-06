@@ -13,3 +13,4 @@ export function Counter() {
         </div>
     )
 }
+/*the parameter should be a callback function, as the setter function may be asynchronous and therefore count may not update correctly */
