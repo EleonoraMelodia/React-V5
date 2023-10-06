@@ -1,11 +1,4 @@
-import { useState } from "react";
-
-export function Counter() {
-    const [counter, setCounter] = useState(9)
-    function handleCounter() {
-        setCounter (counter +1 )
-    }
-
+export function Counter({counter, handleCounter}) {
     return (
         <div>
             <p>{counter}</p>
@@ -13,4 +6,3 @@ export function Counter() {
         </div>
     )
 }
-/*the parameter should be a callback function, as the setter function may be asynchronous and therefore count may not update correctly */
