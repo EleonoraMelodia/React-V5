@@ -1,10 +1,10 @@
 import { Age } from "./Age";
 
-export function Welcome({ name}) {
+export function Welcome({ name, age }) {
   return (
     <>
       <p>Welcome, {name} </p>
-      <Age age={24} />
+      {age > 18 ? <Age age={age} /> : "sorry, too young for this application"}
     </>
   );
 }
