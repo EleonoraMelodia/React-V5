@@ -1,6 +1,6 @@
 export function MouseClicker({ name }) {
   function handleClick(e) {
-    console.log(e.target.name);
+    console.log(e.currentTarget.name);
     }
     
     function handleImg(e) {
@@ -13,4 +13,4 @@ export function MouseClicker({ name }) {
   );
 }
 
-/*yes the name is still printed in the console due to the event handler attached to the button, which however is triggered by the image */
+/* I can do this using the CurrentTarget event property, which allows me to detect the element the event handler is attached to */
