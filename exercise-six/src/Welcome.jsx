@@ -1,4 +1,4 @@
-export function Welcome({ name}) {
+export function Welcome({ name = " unknow person " }) {
   return <p> Welcome, {name}! </p>;
 }
 
