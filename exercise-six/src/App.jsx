@@ -4,6 +4,7 @@ import { Welcome } from "./Welcome";
 import { AlertClock } from "./AlertClock";
 import { Counter } from "./Counter";
 import { useState } from "react";
+import { Clock } from "./Clock";
 
 function App() {
   function handleButtonClick() {
@@ -28,7 +29,7 @@ function App() {
       <Welcome name={<strong>John</strong>} age={44} />
       <AlertClock buttonClicked={handleButtonClick} />
       <Counter counter={counter} incrementCounter={incrementCounter} decrementCounter={decrementCounter}  reset = {reset} />
-      
+      <Clock/>
     </div>
   );
 }
