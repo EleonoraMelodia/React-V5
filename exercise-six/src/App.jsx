@@ -22,6 +22,7 @@ function App() {
       <Welcome name={<strong>John</strong>} age={44} />
       <AlertClock buttonClicked={handleButtonClick} />
       <Counter counter={ counter} handleCounter = {handleCounter} />
+      
     </div>
   );
 }
