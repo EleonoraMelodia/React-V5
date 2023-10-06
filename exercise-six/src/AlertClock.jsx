@@ -1,4 +1,4 @@
-export function AlertClock(e) {
+export function AlertClock() {
     return <button onClick={handleButtonClick}> Current Time </button>
 }
 

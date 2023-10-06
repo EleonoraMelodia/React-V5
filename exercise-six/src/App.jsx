@@ -9,7 +9,7 @@ function App() {
       <Hello />
       <Message />
       <Welcome name={<strong>John</strong>} age={4} />
-      <AlertClock />
+ <AlertClock/>
     </div>
   );
 }
