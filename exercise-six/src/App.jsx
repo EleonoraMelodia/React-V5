@@ -11,8 +11,14 @@ function App() {
     alert(`The current time is: ${time.toLocaleTimeString()}`);
   }
    const [counter, setCounter] = useState(0)
-    function handleCounter() {
+    function incrementCounter () {
         setCounter (counter +1 )
+    }
+    function decrementCounter() {
+        setCounter (counter - 1 )
+    }
+    function reset() {
+        setCounter (0)
     }
 
   return (
@@ -21,7 +27,7 @@ function App() {
       <Message />
       <Welcome name={<strong>John</strong>} age={44} />
       <AlertClock buttonClicked={handleButtonClick} />
-      <Counter counter={ counter} handleCounter = {handleCounter} />
+      <Counter counter={counter} incrementCounter={incrementCounter} decrementCounter={decrementCounter}  reset = {reset} />
       
     </div>
   );
