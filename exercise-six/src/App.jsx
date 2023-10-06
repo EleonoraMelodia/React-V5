@@ -1,16 +1,14 @@
-import { Hello } from "./Hello"
-import { Message } from "./Message"
+import { Hello } from "./Hello";
+import { Message } from "./Message";
+import { Welcome } from "./Welcome";
 
 function App() {
- 
   return (
     <div>
       <Hello />
-      <Message/>
+      <Message />
+      <Welcome name="Jerry" />
     </div>
-  )
+  );
 }
-export default App
-
-
-/* Yes, I could render the Message component directly in the App.jsx. This would allow me to reuse the component in multiple parts of the application */
+export default App;
