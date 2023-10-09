@@ -24,7 +24,11 @@ function App() {
     }
     function reset() {
         setCounter (0)
-    }
+  }
+  
+  function handleLogin(data) {
+    console.log('The user data are: ',data);
+  }
 
   return (
     <div>
@@ -37,7 +41,7 @@ function App() {
       <MouseClicker name="one" />
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
       <InteractiveWelcome />
-      <Login/>
+      <Login onLogin={handleLogin} />
     </div>
   );
 }
