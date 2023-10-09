@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Clock } from "./Clock";
 import { MouseClicker } from "./MouseClicker";
 import { MultiButton } from "./MultiButton";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 
 function App() {
   function handleButtonClick() {
@@ -28,12 +29,13 @@ function App() {
     <div>
       <Hello />
       <Message />
-      <Welcome name={<strong>John</strong>} age={44} />
+      <Welcome age={35} />
       <AlertClock buttonClicked={handleButtonClick} />
       <Counter counter={counter} incrementCounter={incrementCounter} decrementCounter={decrementCounter}  reset = {reset} />
       <Clock />
       <MouseClicker name="one" />
-      <MultiButton nameOne="one" nameTwo ="two"  nameThree = "three"/>
+      <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
+      <InteractiveWelcome/>
     </div>
   );
 }
