@@ -27,7 +27,7 @@ function App() {
   }
   
   function handleLogin(data) {
-    console.log('The user data are: ',data);
+    console.log('The user data are:',data);
   }
 
   return (
