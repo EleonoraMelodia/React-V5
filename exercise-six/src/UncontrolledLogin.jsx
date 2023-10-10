@@ -1,13 +1,12 @@
 export function UncontrolledLogin() {
   function handleFormSubmit(event) {
     event.preventDefault();
-    const username = event.target.password.value;
-    const password = event.target.elements.namedItem("password").value;
-    const checkbox = event.target.remember.checked;
+    const formData = new FormData(event.target);
+
     const data = {
-      username,
-      password,
-      checkbox,
+      username: formData.get("username"),
+      password: formData.get("password"),
+      checkbox: formData.get("remember") === "on" ? true : false,
     };
     console.log(data);
   }
@@ -22,6 +21,6 @@ export function UncontrolledLogin() {
     </form>
   );
 }
-//Yes, there exists other API's to access the values of my form, such as using the costructor method on the FormData API, 
-//so creating a new object and accessing its values.
-//there are also some shortcuts of the standard API, but not all browsers supports them.
+// The advantage is that it summarizes the syntax.
+// The disadvantage is that in the case of the checkbox the outcome is null in case of deselection,
+// rather than false, so the ternary operator must be used to give the desired outcome
