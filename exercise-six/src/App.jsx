@@ -9,6 +9,7 @@ import { MouseClicker } from "./MouseClicker";
 import { MultiButton } from "./MultiButton";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { FocusableInput } from "./FocusableInput";
 
 function App() {
   function handleButtonClick() {
@@ -42,6 +43,7 @@ function App() {
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
+      <FocusableInput/>
     </div>
   );
 }
