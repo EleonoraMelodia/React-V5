@@ -3,7 +3,7 @@ export function Colors({ items }) {
     <>
       <ul>
         {items.map((item) => (
-          <li key={item}> {item} </li>
+          <li key={item.id}> {item.name} </li>
         ))}
       </ul>
     </>

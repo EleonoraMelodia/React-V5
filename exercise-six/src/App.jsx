@@ -51,7 +51,23 @@ function App() {
       <Login onLogin={handleLogin} />
       <FocusableInput />
       <Colors
-        items={["blue", "liliac", "burgundy", "black"]}
+        items={[{
+        id:1,
+        name: "Kyle",
+        },
+          {
+        id:2,
+        name: "Charlotte",
+        },
+          {
+        id:3,
+        name: "Marnie",
+        },
+          {
+        id:4,
+        name: "Gaz",
+      }]
+      }
       />
     </div>
   );
