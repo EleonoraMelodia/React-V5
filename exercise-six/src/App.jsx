@@ -50,7 +50,9 @@ function App() {
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
       <FocusableInput />
-      <Colors item={["blue", "liliac", "black", "burgundy"]} />
+      <Colors
+        items={["blue", "liliac", "burgundy", "black"]}
+      />
     </div>
   );
 }
