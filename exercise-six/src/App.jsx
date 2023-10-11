@@ -10,25 +10,26 @@ import { MultiButton } from "./MultiButton";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { FocusableInput } from "./FocusableInput";
+import { Colors } from "./Colors";
 
 function App() {
   function handleButtonClick() {
     const time = new Date();
     alert(`The current time is: ${time.toLocaleTimeString()}`);
   }
-   const [counter, setCounter] = useState(0)
-    function incrementCounter () {
-        setCounter (counter +1 )
-    }
-    function decrementCounter() {
-        setCounter (counter - 1 )
-    }
-    function reset() {
-        setCounter (0)
+  const [counter, setCounter] = useState(0);
+  function incrementCounter() {
+    setCounter(counter + 1);
   }
-  
+  function decrementCounter() {
+    setCounter(counter - 1);
+  }
+  function reset() {
+    setCounter(0);
+  }
+
   function handleLogin(data) {
-    console.log('The user data are: ',data);
+    console.log("The user data are: ", data);
   }
 
   return (
@@ -37,13 +38,19 @@ function App() {
       <Message />
       <Welcome age={35} />
       <AlertClock buttonClicked={handleButtonClick} />
-      <Counter counter={counter} incrementCounter={incrementCounter} decrementCounter={decrementCounter}  reset = {reset} />
+      <Counter
+        counter={counter}
+        incrementCounter={incrementCounter}
+        decrementCounter={decrementCounter}
+        reset={reset}
+      />
       <Clock />
       <MouseClicker name="one" />
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
       <InteractiveWelcome />
       <Login onLogin={handleLogin} />
-      <FocusableInput/>
+      <FocusableInput />
+      <Colors item={["blue", "liliac", "black", "burgundy"]} />
     </div>
   );
 }
