@@ -1,3 +1,4 @@
+import classes from "./ToDoList.module.scss";
 import { useRef, useState } from "react";
 
 export function ToDoList() {
@@ -21,17 +22,26 @@ export function ToDoList() {
 
   return (
     <>
-      <ul>
+      <ul className={classes.listCont}>
         {items.map((item, index) => (
-          <li key={index}>
+          <li className={classes.lists} key={index}>
             {item}
-            <button onClick={() => handleRemoveButton(index)}>Remove</button>
+            <button
+              className={classes.button}
+              onClick={() => handleRemoveButton(index)}
+            >
+              Remove
+            </button>
           </li>
         ))}
       </ul>
-      <input ref={inputRef} type="text" />
-      <button onClick={handleButton}>To do</button>
-      <button onClick={handleResetButton}>Reset the list</button>
+      <input className={classes.input} ref={inputRef} type="text" />
+      <button className={classes.button} onClick={handleButton}>
+        To do
+      </button>
+      <button className={classes.button} onClick={handleResetButton}>
+        Reset the list
+      </button>
     </>
   );
 }
