@@ -11,6 +11,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { FocusableInput } from "./FocusableInput";
 import { Colors } from "./Colors";
+import { ToDoList } from "./ToDoList";
 
 function App() {
   function handleButtonClick() {
@@ -51,24 +52,26 @@ function App() {
       <Login onLogin={handleLogin} />
       <FocusableInput />
       <Colors
-        items={[{
-        id:1,
-        name: "Kyle",
-        },
+        items={[
           {
-        id:2,
-        name: "Charlotte",
-        },
+            id: 1,
+            name: "Kyle",
+          },
           {
-        id:3,
-        name: "Marnie",
-        },
+            id: 2,
+            name: "Charlotte",
+          },
           {
-        id:4,
-        name: "Gaz",
-      }]
-      }
+            id: 3,
+            name: "Marnie",
+          },
+          {
+            id: 4,
+            name: "Gaz",
+          },
+        ]}
       />
+      <ToDoList />
     </div>
   );
 }
