@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Login({onLogin}) {
+export function Login({ onLogin }) {
   function useData() {
     return { password: "", username: "", remember: false };
   }
@@ -20,6 +20,7 @@ export function Login({onLogin}) {
   function handleLogin() {
     onLogin(data);
   }
+
   return (
     <div>
       <input
@@ -29,6 +30,7 @@ export function Login({onLogin}) {
         onChange={handleDataChange}
       />
       <input
+        style={{ backgroundColor: data.password.length > 8 ? "green" : "red" }}
         type="password"
         name="password"
         value={data.password}
