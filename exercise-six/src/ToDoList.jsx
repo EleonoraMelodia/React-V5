@@ -7,6 +7,10 @@ export function ToDoList() {
     setItems([...items, inputRef.current.value]);
     inputRef.current.value = " ";
   }
+  
+  function handleResetButton() {
+    setItems([])
+  }
   return (
     <>
       <ul>
@@ -15,7 +19,8 @@ export function ToDoList() {
         ))}
       </ul>
       <input ref={inputRef} type="text" />
-      <button onClick={handleButton}> Add some </button>
+      <button onClick={handleButton}> To do </button>
+      <button onClick={handleResetButton}>Reset the list</button>
     </>
   );
 }
