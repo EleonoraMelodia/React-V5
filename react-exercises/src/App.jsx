@@ -1,18 +1,18 @@
-/*Write a function that receives a name argument and returns a h1 tag with the name variable appended to the "Hello, " string.*/ 
 
-
-function returnAName(name) {
-  return name
-}
 
 function App() {
+  function returnAName(name) {
   return (
     <div>
-      <h1> Hello {returnAName("Jimmy")}</h1>
+      <h1>{name}</h1>
+    </div>
+  );
+}
+  return (
+    <div>
+      {returnAName("Jimmy")}
     </div>
   );
 }
 
 export default App;
-
-
