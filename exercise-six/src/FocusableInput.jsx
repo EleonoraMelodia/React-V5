@@ -7,7 +7,7 @@ inputRef.current?.focus()
 const inputRef = useRef(null)
 
     return (
-    <input type="text"  ref={inputRef}  />)
+    <input className="form-control bg-primary text-white" type="text"  ref={inputRef}  />)
 
 
 
