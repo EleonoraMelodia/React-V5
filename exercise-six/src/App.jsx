@@ -12,6 +12,7 @@ import { Login } from "./Login";
 import { FocusableInput } from "./FocusableInput";
 import { Colors } from "./Colors";
 import { ToDoList } from "./ToDoList";
+import { Container } from "./Container";
 
 function App() {
   function handleButtonClick() {
@@ -34,7 +35,7 @@ function App() {
   }
 
   return (
-    <div>
+    <Container>
       <Hello />
       <Message />
       <Welcome age={35} />
@@ -72,8 +73,8 @@ function App() {
         ]}
       />
       <ToDoList />
-    </div>
-  );
+    </Container>
+  )
 }
 
 export default App;
