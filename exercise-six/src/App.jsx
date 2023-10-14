@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <Container>
+    <Container title={ <h1> This is my awesome container </h1>  }>
       <Hello />
       <Message />
       <Welcome age={35} />

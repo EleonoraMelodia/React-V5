@@ -1,8 +1,11 @@
-export function Container({ children }) {
+export function Container({ children, title }) {
   return (
-    <div style={{ border: "1px solid blue", backgroundColor: "beige" }}>
-      {children}
-    </div>
+    <>
+      {title}
+      <div style={{ border: "1px solid blue", backgroundColor: "beige" }}>
+        {children}
+      </div>
+    </>
   );
 }
 //purtroppo attualmente non sono riuscita a installare correttamente Tailwind
