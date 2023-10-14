@@ -5,4 +5,4 @@ export function Container({ children }) {
     </div>
   );
 }
-//purtroppo attualmente non sono riuscita a istallare correttamente Tailwind
+//purtroppo attualmente non sono riuscita a installare correttamente Tailwind
