@@ -13,6 +13,7 @@ import { FocusableInput } from "./FocusableInput";
 import { Colors } from "./Colors";
 import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
+import { GithubUser } from "./GithubUser";
 
 // Answer to the question: it happens, essentialy that the Clock component can't access anymore to the Context
 // of the LanguageContext component, and so it access to the default value given to the hook "useContext".
@@ -100,8 +101,9 @@ function App() {
           },
         ]}
       />
-
       <ToDoList />
+    
+      <GithubUser name="eleonoramelodia" />
     </Container>
   );
 }
