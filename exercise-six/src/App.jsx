@@ -37,7 +37,7 @@ function App() {
 
   const [language, setLanguage] = useState("en");
 
-  function handleLanguageSelection() {
+  function handleLanguageSelection(language) {
     setLanguage(language);
   }
 
@@ -60,12 +60,12 @@ function App() {
 
       <LanguageContext.Provider value={language}>
         <select
-          onChange={handleLanguageSelection}
+          onChange={() => handleLanguageSelection('IT')}
           name="language"
-          id="languare"
+          id="language"
         >
-          <option value="it">IT</option>
           <option value="en">EN</option>
+          <option value="it">IT</option>
         </select>
 
         <Clock />
