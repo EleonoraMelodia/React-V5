@@ -13,8 +13,9 @@ import { FocusableInput } from "./FocusableInput";
 import { Colors } from "./Colors";
 import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
-import { LanguageContext } from "./LanguageContext";
 
+// Answer to the question: it happens, essentialy that the Clock component can't access anymore to the Context
+// of the LanguageContext component, and so it access to the default value given to the hook "useContext".
 function App() {
   function handleButtonClick() {
     const time = new Date();
@@ -58,18 +59,16 @@ function App() {
         reset={reset}
       />
 
-      
-        <select
-          onChange={() => handleLanguageSelection('IT')}
-          name="language"
-          id="language"
-        >
-          <option value="en">EN</option>
-          <option value="it">IT</option>
-        </select>
+      <select
+        onChange={() => handleLanguageSelection("IT")}
+        name="language"
+        id="language"
+      >
+        <option value="en">EN</option>
+        <option value="it">IT</option>
+      </select>
 
-        <Clock />
-    
+      <Clock />
 
       <MouseClicker name="one" />
 
@@ -108,7 +107,3 @@ function App() {
 }
 
 export default App;
-
-
-// Answer to the question: it happens, essentialy that the Clock component can't access anymore to the Context
-// of the LanguageContext component, and so it access to the default value given to the hook "useContext".
