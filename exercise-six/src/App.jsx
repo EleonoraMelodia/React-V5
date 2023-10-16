@@ -14,6 +14,7 @@ import { Colors } from "./Colors";
 import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
 import { GithubUser } from "./GithubUser";
+import { GithubUsersList } from "./GithubUsers";
 
 // Answer to the question: it happens, essentialy that the Clock component can't access anymore to the Context
 // of the LanguageContext component, and so it access to the default value given to the hook "useContext".
@@ -44,67 +45,70 @@ function App() {
   }
 
   return (
-    <Container title={<h1> This is my awesome container </h1>}>
-      <Hello />
+    <>
+      {" "}
+      <Container title={<h1> This is my awesome container </h1>}>
+        <Hello />
 
-      <Message />
+        <Message />
 
-      <Welcome age={35} />
+        <Welcome age={35} />
 
-      <AlertClock buttonClicked={handleButtonClick} />
+        <AlertClock buttonClicked={handleButtonClick} />
 
-      <Counter
-        counter={counter}
-        incrementCounter={incrementCounter}
-        decrementCounter={decrementCounter}
-        reset={reset}
-      />
+        <Counter
+          counter={counter}
+          incrementCounter={incrementCounter}
+          decrementCounter={decrementCounter}
+          reset={reset}
+        />
 
-      <select
-        onChange={() => handleLanguageSelection("IT")}
-        name="language"
-        id="language"
-      >
-        <option value="en">EN</option>
-        <option value="it">IT</option>
-      </select>
+        <select
+          onChange={() => handleLanguageSelection("IT")}
+          name="language"
+          id="language"
+        >
+          <option value="en">EN</option>
+          <option value="it">IT</option>
+        </select>
 
-      <Clock />
+        <Clock />
 
-      <MouseClicker name="one" />
+        <MouseClicker name="one" />
 
-      <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
+        <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
 
-      <InteractiveWelcome />
+        <InteractiveWelcome />
 
-      <Login onLogin={handleLogin} />
+        <Login onLogin={handleLogin} />
 
-      <FocusableInput />
+        <FocusableInput />
 
-      <Colors
-        items={[
-          {
-            id: 1,
-            name: "Kyle",
-          },
-          {
-            id: 2,
-            name: "Charlotte",
-          },
-          {
-            id: 3,
-            name: "Marnie",
-          },
-          {
-            id: 4,
-            name: "Gaz",
-          },
-        ]}
-      />
-      <ToDoList />
-    
+        <Colors
+          items={[
+            {
+              id: 1,
+              name: "Kyle",
+            },
+            {
+              id: 2,
+              name: "Charlotte",
+            },
+            {
+              id: 3,
+              name: "Marnie",
+            },
+            {
+              id: 4,
+              name: "Gaz",
+            },
+          ]}
+        />
+        <ToDoList />
+      </Container>
       <GithubUser name="eleonoramelodia" />
-    </Container>
+      <GithubUsersList/>
+    </>
   );
 }
 
