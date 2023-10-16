@@ -58,7 +58,7 @@ function App() {
         reset={reset}
       />
 
-      <LanguageContext.Provider value={language}>
+      
         <select
           onChange={() => handleLanguageSelection('IT')}
           name="language"
@@ -69,7 +69,7 @@ function App() {
         </select>
 
         <Clock />
-      </LanguageContext.Provider>
+    
 
       <MouseClicker name="one" />
 
@@ -108,3 +108,7 @@ function App() {
 }
 
 export default App;
+
+
+// Answer to the question: it happens, essentialy that the Clock component can't access anymore to the Context
+// of the LanguageContext component, and so it access to the default value given to the hook "useContext".
