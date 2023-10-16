@@ -13,6 +13,7 @@ import { FocusableInput } from "./FocusableInput";
 import { Colors } from "./Colors";
 import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
+import { LanguageContext } from "./LanguageContext";
 
 function App() {
   function handleButtonClick() {
@@ -34,24 +35,52 @@ function App() {
     console.log("The user data are: ", data);
   }
 
+  const [language, setLanguage] = useState("en");
+
+  function handleLanguageSelection() {
+    setLanguage(language);
+  }
+
   return (
-    <Container title={ <h1> This is my awesome container </h1>  }>
+    <Container title={<h1> This is my awesome container </h1>}>
       <Hello />
+
       <Message />
+
       <Welcome age={35} />
+
       <AlertClock buttonClicked={handleButtonClick} />
+
       <Counter
         counter={counter}
         incrementCounter={incrementCounter}
         decrementCounter={decrementCounter}
         reset={reset}
       />
-      <Clock />
+
+      <LanguageContext.Provider value={language}>
+        <select
+          onChange={handleLanguageSelection}
+          name="language"
+          id="languare"
+        >
+          <option value="it">IT</option>
+          <option value="en">EN</option>
+        </select>
+
+        <Clock />
+      </LanguageContext.Provider>
+
       <MouseClicker name="one" />
+
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
+
       <InteractiveWelcome />
+
       <Login onLogin={handleLogin} />
+
       <FocusableInput />
+
       <Colors
         items={[
           {
@@ -72,9 +101,10 @@ function App() {
           },
         ]}
       />
+
       <ToDoList />
     </Container>
-  )
+  );
 }
 
 export default App;
