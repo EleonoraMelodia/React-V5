@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
-import { GithubUser } from "./GithubUser";
+import GithubUser from "./GithubUser";
+
 
 const GithubUsersList = () => {
   const [searchUser, setSearchUser] = useState("");
