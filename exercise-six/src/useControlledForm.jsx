@@ -1,29 +1,25 @@
-/*Create a custom hook that keeps track of the 
-state of a controlled form with the username and password inputs,
-and returns the current value of the inputs as well as an event handler to update either input.
-*/
-
 import { useState } from "react";
 
-const useControlledForm = (initialValue = " " ) => {
-  const [value, setValue] = useState(initialValue);
+const useControlledForm = () => {
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
 
-  const handleUpdateInput = (event) => {
-    setValue(event.target.value);
+  const handleUpdatePassword = (event) => {
+    setPassword(event.target.value);
+    console.log(password);
   };
 
-  return value, handleUpdateInput;
+  const handleUpdateUsername = (event) => {
+    setUsername(event.target.value);
+    console.log(username);
+  };
+
+  return {
+    password,
+    username,
+    handleUpdatePassword,
+    handleUpdateUsername,
+  };
 };
 
-export const HookForm = ({initialValue= " " }) => {
-    const { value, handleUpdateInput } = useControlledForm(initialValue);
-
-    return (
-        <form action="#">
-            <input type="text" />
-            
-            <input type="password"/>
-
-        </form>
-    )
-} 
+export default useControlledForm;
