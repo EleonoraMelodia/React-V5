@@ -1,14 +1,14 @@
-import { Age } from "./Age";
+import { useParams } from "react-router-dom";
 
-export function Welcome({ name, age }) {
+
+export function Welcome() {
+  const { name } = useParams();
+
   return (
     <>
-      <p className="paragraph">Welcome, {name}! </p>
-      {18 < age < 65 ? (
-        <Age age={age} />
-      ) : (
-        "too young or too old for this application"
-      )}
+      <p> Welcome, {name}! </p>
+ 
+    
     </>
-  );
+  )
 }
