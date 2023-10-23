@@ -16,6 +16,7 @@ import { Container } from "./Container";
 import GithubUsersList from "./GithubUsersList";
 import CurrentLocation from "./CurrentLocation";
 import HookControlledForm from "./HookControlledForm";
+import FilteredList from "./FilteredList";
 
 // Answer to the question: it happens, essentialy that the Clock component can't access anymore to the Context
 // of the LanguageContext component, and so it access to the default value given to the hook "useContext".
@@ -108,8 +109,16 @@ function App() {
         <ToDoList />
       </Container>
       <GithubUsersList />
-    <HookControlledForm/>
+      <HookControlledForm />
       <CurrentLocation />
+      <FilteredList
+        objects={[
+          { id: 1, name: "Ted", age: 27 },
+          { id: 2, name: "Barney", age: 31 },
+          { id: 3, name: "Robin", age: 17 },
+          { id: 4, name: "Marshall", age: 7 },
+        ]}
+      />
     </>
   );
 }
