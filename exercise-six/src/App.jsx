@@ -8,8 +8,8 @@ const App = () => {
   return (
     <>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/counter">Counter</Link>
+        <Link to="/">Home</Link> |
+        <Link to="/counter">Counter</Link> |
         <Link to="/users">Users</Link>
       </nav>
 
