@@ -1,7 +1,5 @@
 import useSWR from 'swr'
 
-const fetcher = url => fetch(url).then(response => response.json())
-
 const useGitHubUser = (username) => {
 if (username === null) {
     return {
@@ -12,7 +10,7 @@ if (username === null) {
   }
 
 
-  const { data, error, mutate } = useSWR(`https://api.github.com/users/${username}`, fetcher);
+  const { data, error, mutate } = useSWR(`https://api.github.com/users/${username}`);
   
   const handleRefetchData = () => {
   mutate()
@@ -22,7 +20,6 @@ if (username === null) {
 
     data,
     error,
-    fetchGithubUser: fetcher,
     onRefetch: handleRefetchData,
     loading: !data && !error,
   };
