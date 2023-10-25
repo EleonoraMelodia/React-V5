@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
-import GithubUser from "./GithubUser";
+import { useState, useRef } from "react";
 
+import { Link, Outlet } from "react-router-dom";
 
 const GithubUsersList = () => {
   const [searchUser, setSearchUser] = useState("");
@@ -8,7 +8,7 @@ const GithubUsersList = () => {
   const inputRef = useRef();
 
   const handleSearch = () => {
-    setUserList((prevUserList) => [...prevUserList, searchUser]);
+   setUserList((prevUserList) => [...prevUserList, { login: searchUser }]);
     inputRef.current.value = "";
   };
 
@@ -25,12 +25,14 @@ const GithubUsersList = () => {
         <button onClick={handleSearch}>Cerca Utente</button>
       </div>
       <ul>
-        {userList.map((user, index) => (
+        {userList && userList.map((user, index) => (
           <li key={index}>
-            <GithubUser selectedUser={user} />
+            <Link to={`/users/${user.login}`}>{user.login}</Link>
           </li>
         ))}
       </ul>
+      <hr />
+      <Outlet />
     </div>
   );
 };
